@@ -4,16 +4,16 @@
 import SwiftUI
 
 
-struct CustomButton: View {
-    let title: String
-    let action: () -> Void
+public struct CustomButton: View {
+    private let title: String
+    private let action: () -> Void
     
-    init(title: String, action: @escaping () -> Void) {
+    public init(title: String, action: @escaping () -> Void) {
         self.title = title
         self.action = action
     }
     
-    var body: some View {
+    public var body: some View {
         Button(action: action) {
             Text(title)
         }
